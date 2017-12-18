@@ -151,6 +151,7 @@
   "dependencies": {
     "bootstrap": "v4.0.0-beta.2",
     "jquery": "1.12.4 - 3",
-    "popper.js": "^1.12.3"
+    "popper.js": "^1.12.3",
+    "line-awesome": "git://github.com/icons8/line-awesome.git"
   }
 }

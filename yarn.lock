@@ -3403,6 +3403,10 @@ limiter@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.2.tgz#229d8055891c8b11af9e0ee5200e8e09bb3dcbeb"
 
+"line-awesome@git://github.com/icons8/line-awesome.git":
+  version "0.9.0"
+  resolved "git://github.com/icons8/line-awesome.git#912ed9f69c1e99ef3c451af2e8e58c5f7b6e3af9"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
