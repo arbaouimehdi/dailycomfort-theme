@@ -1,6 +1,40 @@
-/** Import Bootstrap functions */
-@import "~bootstrap/scss/functions";
+//== Base Colors
+$df-base-bg: #fff;
+$df-base-text: #353535;
+$df-titles: #303132;
+$df-subtitles: #8f9090;
 
-$theme-colors: (
-  primary: #27ae60
-);
+//== Typography
+
+//== Iconography
+
+//== Components
+
+//== Buttons
+
+//== Forms
+
+//== Dropdowns
+
+//== Pagination
+$df-pagination-links: #a9a9a9;
+$df-pagination-active: #474747;
+
+//== Badges
+
+//== Slideshows
+
+//== Footer
+$df-footer-text: #cacaca;
+$df-footer-links: #a5a5a5;
+$df-footer-2-background: #383838;
+$df-footer-2-links: #fff;
+$df-footer-2-text: #a5a5a5;
+
+//== Header
+$df-header-text: #383838;
+
+//== Gallery
+$df-gallery-bg: #efefef;
+$df-gallery-next: #f74;
+$df-gallery-prev: #c0c0c0;
