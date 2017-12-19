@@ -1,1 +1,32 @@
 /** Buttons */
+.btn {
+  border: 1px solid $df-btn-border;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  font-size: 11px;
+
+  i,
+  img {
+    position: relative;
+    top: 2px;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  &.btn-light {
+    background: $df-btn-light-bg;
+    color: $df-btn-light-color;
+  }
+
+  &.btn-dark {
+    background: $df-btn-dark-bg;
+    color: #fff;
+  }
+}

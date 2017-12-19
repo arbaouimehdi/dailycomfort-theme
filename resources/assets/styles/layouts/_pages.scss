@@ -1,1 +1,37 @@
 /** Pages */
+
+/** Home Page */
+.home {
+  background: url('./images/bg.png') no-repeat;
+  background-size: cover;
+  background-position: 0 30%;
+}
+
+.big-title {
+  padding-top: 160px;
+
+  b {
+    text-decoration: line-through;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.7em;
+    margin-bottom: 20px;
+    font-weight: 200;
+  }
+
+  .btn {
+    display: inline-block;
+
+    i {
+      margin-left: 20px;
+    }
+  }
+}
