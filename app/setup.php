@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts', function () {
  * Theme setup
  */
 add_action('after_setup_theme', function () {
+
     /**
      * Enable features from Soil when plugin is activated
      * @link https://roots.io/plugins/soil/
@@ -55,11 +56,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
-    /**
-     * Enable selective refresh for widgets in customizer
-     * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
-     */
-    add_theme_support('customize-selective-refresh-widgets');
+    /** Enable Woocomerce Support */
+    add_theme_support( 'woocommerce' );
 
     /**
      * Use main stylesheet for visual editor
