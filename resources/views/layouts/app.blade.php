@@ -19,7 +19,7 @@
     <!-- #                              # -->
     <!-- #                              # -->
     <!-- # ############################ # --}}
-    <div class="wrap container" role="document">
+    <div class="wrap <?php echo is_home() ? 'container' : '' ?>" role="document">
       <div class="content">
         <main class="main">
           @yield('content')
