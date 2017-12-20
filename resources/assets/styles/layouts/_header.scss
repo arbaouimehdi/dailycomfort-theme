@@ -8,6 +8,8 @@
   font-size: 14px;
   text-transform: uppercase;
   padding: 15px 0 10px;
+  position: relative;
+  z-index: 1;
 
   a {
     color: $df-header-text;
