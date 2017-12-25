@@ -90,38 +90,65 @@
   <!-- # ############################ # --}}
   <div class="categories-section section">
     <div class="container">
-      <div class="row">
 
-        {{-- # Title --}}
-        <div class="section-title">
-          <h2>Our Shop</h2>
-          <h3>From stylish sofas available in a variety of colours</h3>
-        </div>
+      {{-- # Title --}}
+      <div class="section-title">
+        <h2>Our Shop</h2>
+        <h3>From stylish sofas available in a variety of colours</h3>
+      </div>
 
-        {{-- # List--}}
-        <div class="cat-list">
-          {{-- # Tabs Navigation --}}
-          <nav class="nav justify-content-center" id="myTab" role="tablist">
-            <a class="nav-item nav-link active"
-               id="nav-home-tab"
-               data-toggle="tab"
-               href="#nav-home"
-               role="tab"
-               aria-controls="nav-home"
-               aria-selected="true">Chairs</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Sofa</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Beds</a>
-          </nav>
+      {{-- # List--}}
+      <div class="cat-list">
+        {{-- # Tabs Navigation --}}
+        <nav class="nav justify-content-center" id="myTab" role="tablist">
+          <a class="nav-item nav-link active"
+             id="nav-home-tab"
+             data-toggle="tab"
+             href="#nav-home"
+             role="tab"
+             aria-controls="nav-home"
+             aria-selected="true">Chairs</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Sofa</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Beds</a>
+        </nav>
 
-          {{-- # Categories --}}
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <div class="row">
+        {{-- # Categories --}}
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row">
 
-                {{-- # First Product --}}
-                <div class="col-md-6 first-product">
+              {{-- # First Product --}}
+              <div class="col-md-6 first-product">
+                <div class="product-infos">
+                  <img src="https://devitems.com/preview/furnish/img/product/1.jpg" alt="">
+                  <div class="all-infos">
+                    <div>
+                      <a href="#" class="btn-cart">Add to Cart</a>
+                    </div>
+                    <div>
+                      <h5><a href="#">Le Parc Minotti Chair</a></h5>
+                      <span class="price">
+                      <b class="discount">$200</b> -
+                      $169.00
+                    </span>
+                    </div>
+                  </div>
+                </div>
+                {{-- # Category Title --}}
+                <h4>
+                  <a href="#">
+                    <span>Chairs</span>
+                    <span class="la la-arrow-right"></span>
+                  </a>
+                </h4>
+              </div>
+
+              {{-- # Second Products --}}
+              <div class="col-md-6 second-products">
+
+                <div>
                   <div class="product-infos">
-                    <img src="https://devitems.com/preview/furnish/img/product/1.jpg" alt="">
+                    <img src="https://devitems.com/preview/furnish/img/product/5.jpg" alt="">
                     <div class="all-infos">
                       <div>
                         <a href="#" class="btn-cart">Add to Cart</a>
@@ -129,76 +156,116 @@
                       <div>
                         <h5><a href="#">Le Parc Minotti Chair</a></h5>
                         <span class="price">
-                        <b class="discount">$200</b> -
-                        $169.00
-                      </span>
+                      <b class="discount">$200</b> -
+                      $169.00
+                    </span>
                       </div>
                     </div>
                   </div>
-                  {{-- # Category Title --}}
-                  <h4>
-                    <a href="#">
-                      <span>Chairs</span>
-                      <span class="la la-arrow-right"></span>
-                    </a>
-                  </h4>
                 </div>
 
-                {{-- # Second Products --}}
-                <div class="col-md-6 second-products">
-
-                  <div>
-                    <div class="product-infos">
-                      <img src="https://devitems.com/preview/furnish/img/product/5.jpg" alt="">
-                      <div class="all-infos">
-                        <div>
-                          <a href="#" class="btn-cart">Add to Cart</a>
-                        </div>
-                        <div>
-                          <h5><a href="#">Le Parc Minotti Chair</a></h5>
-                          <span class="price">
-                        <b class="discount">$200</b> -
-                        $169.00
-                      </span>
-                        </div>
+                <div>
+                  <div class="product-infos">
+                    <img src="https://devitems.com/preview/furnish/img/product/6.jpg" alt="">
+                    <div class="all-infos">
+                      <div>
+                        <a href="#" class="btn-cart">Add to Cart</a>
+                      </div>
+                      <div>
+                        <h5><a href="#">Le Parc Minotti Chair</a></h5>
+                        <span class="price">
+                      <b class="discount">$200</b> -
+                      $169.00
+                    </span>
                       </div>
                     </div>
                   </div>
-
-                  <div>
-                    <div class="product-infos">
-                      <img src="https://devitems.com/preview/furnish/img/product/6.jpg" alt="">
-                      <div class="all-infos">
-                        <div>
-                          <a href="#" class="btn-cart">Add to Cart</a>
-                        </div>
-                        <div>
-                          <h5><a href="#">Le Parc Minotti Chair</a></h5>
-                          <span class="price">
-                        <b class="discount">$200</b> -
-                        $169.00
-                      </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
 
               </div>
-            </div>
 
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">bbb</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ccc</div>
+            </div>
           </div>
+
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">bbb</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ccc</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {{-- # ############################ # -->
+  <!-- #                              # -->
+  <!-- #           Blog list          # -->
+  <!-- #                              # -->
+  <!-- # ############################ # --}}
+  @if((have_posts()))
+    <div class="blog-section section">
+      <?php
+        $args = array(
+          'posts_per_page' => 2,
+          'order'          => 'ASC',
+          'post_type'      => 'post',
+          'post_status'    => 'publish',
+        );
+        $posts = get_posts($args);
+      ?>
+      <div class="container">
+
+        {{-- # Title --}}
+        <div class="section-title">
+          <h2>Blog News</h2>
+          <h3>Integer interdum ligula quam, molestie mollis ligula</h3>
         </div>
 
+        {{-- # Blog List --}}
+        @foreach($posts as $post)
+          <div class="row">
+          {{-- # Image --}}
+          <div class="col-6 blog-image">
+            @if(has_post_thumbnail( $post_id = $post->ID ))
+              <?php echo get_the_post_thumbnail($post_id, $size = 'full') ?>
+            @endif
+          </div>
+          {{-- # Description --}}
+          <div class="col-6 blog-description">
+            <span class="date">Posted On {{ get_the_date() }}</span>
+            <h4>{{ $post->post_title }}</h4>
+            <div class="blog-excerpt">
+              In commodo dolor vitae sem vulputate pellentesque.
+              Aliquam sit amet mattis Proin sed nulla mi.
+              Curabitur commodo lectus sit amet leo dignissim.
+            </div>
+            <a href="{{ get_permalink($post->ID) }}" class="btn btn-light">
+                Read More
+                <i class="arrow"></i>
+            </a>
+          </div>
+        </div>
+        @endforeach
 
       </div>
     </div>
-    <br/><br/><br/><br/><br/><br/><br/><br/>
+  @endif()
+
+  {{-- # ############################ # -->
+  <!-- #                              # -->
+  <!-- #           NewsLetter         # -->
+  <!-- #                              # -->
+  <!-- # ############################ # --}}
+  <div class="newsletter-section">
+    <div class="container">
+
+      {{-- # Title --}}
+      <div class="section-title">
+        <h2>Sign Up <b>Newsletter</b></h2>
+        <h3>Sign up for the lastest news and offers</h3>
+      </div>
+
+      {{-- # MailChimp Signup Form --}}
+
+    </div>
   </div>
 
 @endsection
-
-

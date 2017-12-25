@@ -88,6 +88,7 @@
   }
 }
 
+/** Gallery */
 .gallery-section {
   color: #383838;
 
@@ -164,6 +165,7 @@
   }
 }
 
+/** Categories */
 .categories-section {
   font-family: Poppins, sans-serif;
 
@@ -274,5 +276,75 @@
         }
       }
     }
+  }
+}
+
+/** Blog */
+.blog-section {
+  margin-bottom: 50px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog-description {
+    background: #f2f2f2;
+    padding: 80px 40px;
+
+    h4 {
+      font-size: 18px;
+    }
+
+    .date {
+      margin-bottom: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #8f9090;
+    }
+
+    .btn {
+      background: #fff;
+    }
+
+    .blog-excerpt {
+      font-size: 13px;
+      color: #353535;
+      margin: 25px 0;
+    }
+  }
+
+  .blog-image {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    &:nth-child(2n) {
+      flex-direction: row-reverse !important;
+    }
+  }
+}
+
+/** Newsletter */
+.newsletter-section {
+  border: 9px solid #dbdbdb;
+  padding: 40px 0;
+
+  h2 {
+    color: #303132;
+    font-weight: 600;
+    font-size: 35px;
+    text-transform: uppercase;
+
+    b {
+      font-weight: 300;
+    }
+  }
+
+  h3 {
+    font-size: 13px;
+    color: #8f9090;
+    font-weight: 200;
   }
 }
