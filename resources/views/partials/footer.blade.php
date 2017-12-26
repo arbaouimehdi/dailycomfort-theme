@@ -7,11 +7,14 @@
         <a href="#"><img src="{{ get_template_directory_uri() }}/assets/images/brand-footer.png" alt="" /></a>
       </div>
       <div class="footer-menu">
-        <ul>
-          @foreach($pages = get_pages() as $page)
-            <li><a href="{{ get_permalink($page->ID) }}">{{ $page->post_title }}</a></li>
-          @endforeach
-        </ul>
+        @if (has_nav_menu('footer_menu'))
+          {!! wp_nav_menu([
+            'theme_location' => 'footer_menu',
+            'menu_class' => '',
+            'container' => '',
+            ])
+          !!}
+        @endif
       </div>
       <div class="footer-social">
         <a href="http://twitter.com/arbaoui_mehdi"><i class="la la-twitter"></i></a>
