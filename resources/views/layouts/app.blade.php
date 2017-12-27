@@ -1,6 +1,6 @@
 <!doctype html>
 <html @php(language_attributes())>
-  @include('partials.head')
+  @include('layouts/head')
   <body @php(body_class())>
 
     {{-- # ############################ # -->
@@ -10,7 +10,7 @@
     <!-- #                              # -->
     <!-- #                              # -->
     <!-- # ############################ # --}}
-    @include('partials.header')
+    @include('layouts.header')
 
     {{-- # ############################ # -->
     <!-- #                              # -->
@@ -19,7 +19,7 @@
     <!-- #                              # -->
     <!-- #                              # -->
     <!-- # ############################ # --}}
-    <div class="wrap <?php echo is_home() ? 'container' : '' ?>" role="document">
+    <div class="wrap {{ !is_front_page() ? 'container' : '' }}" role="document">
       <div class="content">
         <main class="main">
           @yield('content')
@@ -27,11 +27,11 @@
         @if (App\display_sidebar())
           {{-- # ############################ # -->
           <!-- #                              # -->
-          <!-- #              Sidebar         # -->
+          <!-- #           Sidebar            # -->
           <!-- #                              # -->
           <!-- # ############################ # --}}
           <aside class="sidebar">
-            @include('partials.sidebar')
+            @include('layouts.sidebar')
           </aside>
         @endif
       </div>
@@ -45,7 +45,7 @@
     <!-- #                              # -->
     <!-- # ############################ # --}}
     @php(do_action('get_footer'))
-    @include('partials.footer')
+    @include('layouts/footer')
     @php(wp_footer())
 
   </body>

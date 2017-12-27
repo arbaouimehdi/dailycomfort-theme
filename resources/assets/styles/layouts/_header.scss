@@ -13,6 +13,10 @@
   a {
     color: $df-header-text;
   }
+
+  &.header-shadow {
+    box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.13);
+  }
 }
 
 /** Brand **/
@@ -47,7 +51,7 @@
         float: left;
         margin-right: 30px;
 
-        &.active a {
+        &.current-menu-item a {
           font-weight: bold;
           text-decoration: underline;
         }
@@ -74,3 +78,29 @@
   }
 }
 
+/** Page Header **/
+.page-breadcrumbs {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 240px;
+  left: 50%;
+  background: #eeeef0 url('./images/bg.jpg') no-repeat 50% -244px;
+  background-size: 775px;
+
+  .breadcrumbs {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    color: #8d8d8d;
+
+    a {
+      color: #2c2c2c;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

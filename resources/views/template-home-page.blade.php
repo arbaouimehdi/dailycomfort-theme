@@ -13,7 +13,6 @@
   <!-- # ############################ # --}}
   <div class="main-section">
     <div class="container">
-
       <div class="big-title">
         <h1>Quality Doesn’t Have To Be <b>Expensive</b></h1>
         <p>
@@ -35,53 +34,55 @@
   <!-- #        Gallery Section       # -->
   <!-- #                              # -->
   <!-- # ############################ # --}}
-  <div class="gallery-section">
-    <div id="categoriesGallery" class="carousel slide" data-ride="carousel">
+  @if(Shop::categoriesList())
+    <div class="gallery-section">
+      <div id="categoriesGallery" class="carousel slide" data-ride="carousel">
 
-      {{-- # Content --}}
-      <div class="carousel-inner">
+        {{-- # Content --}}
+        <div class="carousel-inner">
 
-        {{-- # Navigation --}}
-        <ol class="carousel-indicators">
-          @foreach(Shop::categoriesList() as $key => $category)
-            <li data-target="#categoriesGallery" data-slide-to="{{ $key }}" class="{{ $category->name == 'Beds' ? 'active' : '' }}"></li>
-          @endforeach
-        </ol>
+          {{-- # Navigation --}}
+          <ol class="carousel-indicators">
+            @foreach(Shop::categoriesList() as $key => $category)
+              <li data-target="#categoriesGallery" data-slide-to="{{ $key }}" class="{{ $category->name == 'Beds' ? 'active' : '' }}"></li>
+            @endforeach
+          </ol>
 
-        {{-- # Items --}}
-        @foreach(Shop::categoriesList() as $category)
-          <div class="carousel-item {{ $category->name == 'Beds' ? 'active' : '' }}">
-            <div class="row">
+          {{-- # Items --}}
+          @foreach(Shop::categoriesList() as $category)
+            <div class="carousel-item {{ $category->name == 'Beds' ? 'active' : '' }}">
+              <div class="row">
 
-              {{-- # Content --}}
-              <div class="col-md-7 carousel-content">
-                <h2>
-                  <b>{{ $category->name }}</b>
-                  Buy {{ $category->name }} Online
-                </h2>
-                <p>
-                  {{ $category->category_description }}
-                </p>
-                <a href="{{ get_term_link($category->term_id) }}" class="btn btn-light">
-                  Discover More
-                  <i class="arrow"></i>
-                </a>
+                {{-- # Content --}}
+                <div class="col-md-7 carousel-content">
+                  <h2>
+                    <b>{{ $category->name }}</b>
+                    Buy {{ $category->name }} Online
+                  </h2>
+                  <p>
+                    {{ $category->category_description }}
+                  </p>
+                  <a href="{{ get_term_link($category->term_id) }}" class="btn btn-light">
+                    Discover More
+                    <i class="arrow"></i>
+                  </a>
+                </div>
+
+                {{-- # Image --}}
+                <div class="col-md-5 carousel-image">
+                  <span>{{ $category->name }}</span>
+                  <img src="{{ Shop::categoryImage($category->term_id) }}" alt="">
+                </div>
+
               </div>
-
-              {{-- # Image --}}
-              <div class="col-md-5 carousel-image">
-                <span>{{ $category->name }}</span>
-                <img src="{{ Shop::categoryImage($category->term_id) }}" alt="">
-              </div>
-
             </div>
-          </div>
-        @endforeach
+          @endforeach
+
+        </div>
 
       </div>
-
     </div>
-  </div>
+  @endif
 
   {{-- # ############################ # -->
   <!-- #                              # -->
@@ -205,7 +206,7 @@
       <?php
         $args = array(
           'posts_per_page' => 2,
-          'order'          => 'ASC',
+          'order'          => 'DESC',
           'post_type'      => 'post',
           'post_status'    => 'publish',
         );
@@ -233,9 +234,7 @@
             <span class="date">Posted On {{ get_the_date() }}</span>
             <h4>{{ $post->post_title }}</h4>
             <div class="blog-excerpt">
-              In commodo dolor vitae sem vulputate pellentesque.
-              Aliquam sit amet mattis Proin sed nulla mi.
-              Curabitur commodo lectus sit amet leo dignissim.
+              {{ $post->post_excerpt }}
             </div>
             <a href="{{ get_permalink($post->ID) }}" class="btn btn-light">
                 Read More
