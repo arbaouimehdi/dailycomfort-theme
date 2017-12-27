@@ -51,9 +51,12 @@
         float: left;
         margin-right: 30px;
 
-        &.current-menu-item a {
-          font-weight: bold;
-          text-decoration: underline;
+        &.current-menu-item,
+        &.current_page_parent {
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+          }
         }
       }
     }
