@@ -1,7 +1,10 @@
 <div class="page-breadcrumbs">
   <div class="container">
-    @if(!is_woocommerce())
-      {!! App::breadcrumbs() !!}
-    @endif
+    <div class="header-title">
+      <h1>{!! App::title() !!}</h1>
+      @if(!is_woocommerce())
+        {!! App::breadcrumbs() !!}
+      @endif
+    </div>
   </div>
 </div>
