@@ -2,7 +2,9 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
-    @include('partials.content-page')
+    @include('layouts/page-breadcrumbs')
+    <div class="page-container">
+      @include('blog/content-page')
+    </div>
   @endwhile
 @endsection

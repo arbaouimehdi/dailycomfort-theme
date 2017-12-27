@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  @include('layouts/page-breadcrumbs')
 
   @if (!have_posts())
     <div class="alert alert-warning">
@@ -10,9 +10,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
-  @endwhile
+  <div class="page-container">
+    @while(have_posts()) @php(the_post())
+      @include('blog/content-search')
+    @endwhile
+  </div>
 
   {!! get_the_posts_navigation() !!}
 @endsection
