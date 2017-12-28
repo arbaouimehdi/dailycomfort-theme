@@ -60,3 +60,14 @@
     text-decoration: none;
   }
 }
+
+.wpcf7-submit {
+  width: auto !important;
+  background: $df-btn-dark-bg;
+  color: #fff;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
