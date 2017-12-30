@@ -73,12 +73,12 @@ add_filter('comments_template', function ($comments_template) {
  * WooCommerce Support
  */
 add_filter('woocommerce_template_loader_files', function ($search_files, $default_file) {
-  print_r($default_file);
+  //print_r($default_file);
   return filter_templates(array_merge($search_files, [$default_file, 'woocommerce']));
 }, 100, 2);
 
 add_filter('woocommerce_locate_template', function ($template, $template_name, $template_path) {
-  echo $template_path.'/'.$template_name;
+  //echo $template_path.'/'.$template_name;
   $theme_template = locate_template("{$template_path}{$template_name}");
   return $theme_template ? template_path($theme_template) : $template;
 }, 100, 3);
@@ -87,3 +87,12 @@ add_filter('wc_get_template_part', function ($template, $slug, $name) {
   $theme_template = locate_template(["woocommerce/{$slug}-{$name}", "woocommerce/${name}"]);
   return $theme_template ? template_path($theme_template) : $template;
 }, 100, 3);
+
+// Remove Woocommerce styles
+add_filter('woocommerce_enqueue_styles', '__return_false');
+
+/**
+ * Contact Form 7
+ */
+// Remove Styles
+add_filter( 'wpcf7_load_css', '__return_false' );
