@@ -58,7 +58,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
     /** Enable Woocomerce Support */
-    add_theme_support( 'woocommerce' );
+    add_theme_support('woocommerce');
 
     /**
      * Use main stylesheet for visual editor

@@ -527,3 +527,15 @@
     border: 5px solid #ededed;
   }
 }
+
+/** My Account */
+.woocommerce-account {
+  .row {
+    padding: 50px 0;
+
+    .col {
+      border: 1px solid #ddd;
+      padding: 40px;
+    }
+  }
+}

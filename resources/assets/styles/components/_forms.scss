@@ -1,1 +1,119 @@
-/** Search form */
+/** Forms */
+.form-group {
+  &.form-actions {
+    margin-top: 25px;
+  }
+}
+
+/** Contact Form 7 */
+.wpcf7 {
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+}
+
+.wpcf7 .screen-reader-response {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.wpcf7-mail-sent-ok {
+  border: 2px solid #398f14;
+}
+
+.wpcf7-mail-sent-ng {
+  border: 2px solid #ff0;
+}
+
+.wpcf7-spam-blocked {
+  border: 2px solid #ffa500;
+}
+
+.wpcf7-validation-errors {
+  border: 2px solid #f7e700;
+}
+
+.wpcf7-form-control-wrap {
+  position: relative;
+}
+
+.wpcf7-not-valid-tip {
+  color: #f00;
+  font-size: 1em;
+  font-weight: normal;
+  display: block;
+}
+
+.use-floating-validation-tip .wpcf7-not-valid-tip {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 100;
+  border: 1px solid #ff0;
+  background: #fff;
+  padding: 0.2em 0.8em;
+}
+
+.wpcf7-list-item {
+  display: inline-block;
+  margin: 0 0 0 1em;
+}
+
+.wpcf7-list-item-label {
+  &::before,
+  &::after {
+    content: " ";
+  }
+}
+
+.wpcf7-display-none {
+  display: none;
+}
+
+.wpcf7 {
+  .ajax-loader {
+    visibility: hidden;
+    display: inline-block;
+    background-image: url('./images/ajax-loader.gif');
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 4px;
+    vertical-align: middle;
+
+    &.is-active {
+      visibility: visible;
+    }
+  }
+
+  .ajax-error {
+    display: none;
+  }
+
+  .placeheld {
+    color: #888;
+  }
+
+  .wpcf7-recaptcha iframe {
+    margin-bottom: 0;
+  }
+
+  input[type="file"] {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
