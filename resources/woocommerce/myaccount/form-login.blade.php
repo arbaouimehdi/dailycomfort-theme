@@ -1,6 +1,6 @@
 <?php wc_print_notices(); ?>
 
-
+{{-- # Login --}}
 <div class="row justify-content-md-center">
   <div class="col col-lg-6">
 
@@ -27,6 +27,7 @@
                placeholder="Enter your password">
       </div>
 
+      <?php do_action( 'woocommerce_login_form' ); ?>
 
       {{-- # Login & Remember me --}}
       <div class="form-group form-actions">
@@ -43,9 +44,10 @@
       {{-- # Lost Password --}}
       <a href="{{ esc_url(wp_lostpassword_url()) }}">Lost your password?</a>
 
+      <?php do_action( 'woocommerce_login_form_end' ); ?>
+
     </form>
   </div>
 </div>
-
 
 
