@@ -4,6 +4,7 @@
   text-transform: uppercase;
   padding: 15px 30px;
   font-size: 11px;
+  cursor: pointer;
 
   i,
   img {
@@ -43,6 +44,10 @@
   &.btn-dark {
     background: $df-btn-dark-bg;
     color: #fff;
+
+    &:hover {
+      background: #7a7a7a !important;
+    }
   }
 }
 

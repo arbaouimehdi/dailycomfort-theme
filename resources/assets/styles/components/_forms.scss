@@ -1,8 +1,24 @@
 /** Forms */
+form a {
+  text-decoration: underline;
+}
+
 .form-group {
   &.form-actions {
     margin-top: 25px;
+
+    input[type="checkbox"] {
+      margin-left: 10px;
+    }
   }
+
+  .btn {
+    padding: 5px 40px;
+  }
+}
+
+.required {
+  color: red;
 }
 
 /** Contact Form 7 */
