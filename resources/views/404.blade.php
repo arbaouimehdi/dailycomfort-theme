@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('layouts/page-breadcrumbs')
-
   <div class="page-container">
     @if (!have_posts())
       <section>

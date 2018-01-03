@@ -70,6 +70,27 @@ add_filter('comments_template', function ($comments_template) {
 });
 
 /**
+ * Display sidebar
+ */
+add_filter('sage/display_sidebar', function () {
+  static $display;
+
+  isset($display) || $display = in_array(true, [
+    // The sidebar will be displayed if any of the following return true
+    is_home(),
+    is_single(),
+    is_search(),
+    is_archive()
+  ]);
+
+  // example if you want to target a particular custom page template
+  //if (basename(get_page_template()) == "template-full-width.blade.php")
+  //  $display = false;
+
+  return $display;
+});
+
+/**
  * WooCommerce Support
  */
 add_filter('woocommerce_template_loader_files', function ($search_files, $default_file) {

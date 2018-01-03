@@ -15,25 +15,52 @@
     {{-- # ############################ # -->
     <!-- #                              # -->
     <!-- #                              # -->
-    <!-- #              Main            # -->
+    <!-- #              Wrap            # -->
     <!-- #                              # -->
     <!-- #                              # -->
     <!-- # ############################ # --}}
     <div class="wrap {{ !is_front_page() ? 'container' : '' }}" role="document">
+
+      {{-- # ############################ # -->
+      <!-- #                              # -->
+      <!-- #          Breadcrumbs         # -->
+      <!-- #                              # -->
+      <!-- # ############################ # --}}
+      @if(!is_front_page())
+        @include('layouts/page-breadcrumbs')
+      @endif
+
       <div class="content">
-        <main class="main">
-          @yield('content')
-        </main>
+
+        {{-- # ############################ # -->
+        <!-- #                              # -->
+        <!-- #           Sidebar            # -->
+        <!-- #                              # -->
+        <!-- # ############################ # --}}
         @if (App\display_sidebar())
+
+          <div class="row">
+            <main class="main col-sm-9 col-xs-12">
+              @yield('content')
+            </main>
+
+            <aside class="sidebar col-sm-3 col-xs-12">
+              @include('layouts.sidebar')
+            </aside>
+          </div>
+
           {{-- # ############################ # -->
           <!-- #                              # -->
-          <!-- #           Sidebar            # -->
+          <!-- #          No Sidebar          # -->
           <!-- #                              # -->
           <!-- # ############################ # --}}
-          <aside class="sidebar">
-            @include('layouts.sidebar')
-          </aside>
+          @else
+            <main class="main">
+              @yield('content')
+            </main>
+
         @endif
+
       </div>
     </div>
 

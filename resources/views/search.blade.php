@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('layouts/page-breadcrumbs')
 
   @if (!have_posts())
     <div class="alert alert-warning">
