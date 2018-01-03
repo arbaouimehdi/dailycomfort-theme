@@ -1,1 +1,50 @@
 /** Sidebar */
+aside.sidebar {
+  margin: 40px 0;
+
+  h3 {
+    background-color: #eaeaea;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #323232;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+  }
+
+  .tag-cloud-link {
+    text-transform: uppercase;
+    border: 1px solid #e3e3e3;
+    padding: 3px 7px;
+    font-size: 10px !important;
+  }
+
+  .rpwwt-widget {
+    a {
+      span {
+        line-height: 1.5em;
+        display: block;
+        padding-top: 8px;
+      }
+    }
+
+    .rpwwt-post-date {
+      font-size: 12px;
+    }
+  }
+
+  .cat-item {
+    font-size: 13px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+  }
+}

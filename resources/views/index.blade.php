@@ -2,7 +2,6 @@
 
 @section('content')
 
-
   <div class="page-container">
     @if (!have_posts())
       <div class="alert alert-warning">
@@ -14,6 +13,11 @@
     @while (have_posts()) @php(the_post())
       @include('blog/content-'.get_post_type())
     @endwhile
+
+  </div>
+
+  <div class="pagination">
+    {{ Blog\Blog::posts_pagination() }}
   </div>
 
 @endsection

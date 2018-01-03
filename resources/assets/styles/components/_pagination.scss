@@ -1,0 +1,34 @@
+/** Pagination */
+.pagination {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  margin: 15px 0 70px;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
+
+  .page-numbers {
+    color: #a9a9a9;
+    margin: 0 5px;
+
+    &.current,
+    &.prev,
+    &.next {
+      color: #000;
+    }
+
+    &.prev,
+    &.next {
+      margin: 0;
+    }
+  }
+}
