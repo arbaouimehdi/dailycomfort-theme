@@ -89,6 +89,11 @@ add_action('widgets_init', function () {
       'name'          => __('Blog Post', 'sage'),
       'id'            => 'sidebar-blogpost'
     ] + $config);
+
+  register_sidebar([
+      'name'          => __('Shop', 'sage'),
+      'id'            => 'sidebar-shop'
+    ] + $config);
 });
 
 /**

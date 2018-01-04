@@ -14,11 +14,20 @@ aside.sidebar {
 
   ul {
     padding: 0;
+    margin: 0;
 
     li {
-      list-style: none;
+      display: inline-block;
+      width: 100%;
       margin-bottom: 5px;
+      list-style: none;
     }
+  }
+
+  section {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
   }
 
   .tag-cloud-link {
@@ -37,6 +46,10 @@ aside.sidebar {
       }
     }
 
+    ul li img {
+      margin: 0 0.75em 0 0;
+    }
+
     .rpwwt-post-date {
       font-size: 12px;
     }
@@ -46,5 +59,60 @@ aside.sidebar {
     font-size: 13px;
     color: #8c8c8c;
     text-transform: uppercase;
+  }
+}
+
+/** Woocomerce Sidebar */
+.woocommerce {
+  aside.sidebar {
+    .product_list_widget {
+      margin-top: 20px;
+
+      li {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dotted #e8e8e8;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          display: block;
+          font-size: 0.9em;
+
+          img {
+            float: left;
+            margin-right: 15px;
+            width: 80px;
+            height: auto;
+          }
+        }
+
+        ins {
+          color: #2b2b2b;
+          text-decoration: none;
+          font-size: 14px;
+        }
+
+        del {
+          color: #a9a9a9;
+          font-size: 12px;
+          font-weight: 500;
+          text-decoration: none;
+        }
+
+        .amount {
+          font-size: 1.0769230769230769em;
+          font-weight: 600;
+        }
+
+        .product-title {
+          display: inline-block;
+          margin-top: 5px;
+          color: #a9a9a9;
+        }
+      }
+    }
   }
 }
