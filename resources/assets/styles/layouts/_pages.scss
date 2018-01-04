@@ -105,7 +105,6 @@
   }
 }
 
-/** Gallery */
 .gallery-section {
   color: #383838;
 
@@ -182,7 +181,6 @@
   }
 }
 
-/** Categories */
 .categories-section {
   font-family: Poppins, sans-serif;
 
@@ -296,7 +294,6 @@
   }
 }
 
-/** Blog */
 .blog-section {
   margin-bottom: 50px;
 
@@ -335,16 +332,23 @@
     margin: 0;
     padding: 0;
     border: 5px solid #e7e7e7;
+    filter: grayscale(1) brightness(1);
+    transition: 1s filter linear;
   }
 
   .row {
     &:nth-child(2n) {
       flex-direction: row-reverse !important;
     }
+
+    &:hover {
+      .blog-image {
+        filter: none;
+      }
+    }
   }
 }
 
-/** Newsletter */
 .newsletter-section {
   border: 9px solid #dbdbdb;
   padding: 40px 0;
