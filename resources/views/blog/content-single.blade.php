@@ -8,5 +8,9 @@
     @php(the_content())
   </div>
 
+  <div class="row post-footer">
+    @php(dynamic_sidebar('sidebar-blogpost'))
+  </div>
+
   @php(comments_template('blog/comments.blade.php'))
 </article>
