@@ -91,7 +91,8 @@
   background: #eeeef0 url('./images/bg.jpg') no-repeat 50% -244px;
   background-size: 775px;
 
-  .breadcrumbs {
+  .breadcrumbs,
+  .woocommerce-breadcrumb {
     display: inline-block;
     background: #fff;
     font-size: 12px;
