@@ -1,10 +1,111 @@
 /** Shop **/
+.woocommerce {
+  .content > .row {
+    direction: rtl;
+  }
 
-.price {
-  color: #303030;
-  font-size: 13px;
+  main,
+  .sidebar {
+    margin: 20px 0;
+    direction: ltr;
+  }
 
-  .discount {
-    text-decoration: line-through;
+  .sidebar {
+    a:hover {
+      .product-title {
+        color: #000 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .pagination {
+    margin: 50px 0 70px;
+  }
+
+  .price {
+    color: #303030;
+    font-size: 13px;
+
+    .discount {
+      text-decoration: line-through;
+    }
+  }
+
+  .product-price {
+    font-weight: bold;
+
+    del {
+      color: #a9a9a9;
+    }
+
+    ins {
+      color: #2b2b2b;
+      text-decoration: none;
+    }
+  }
+
+  .product-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      height: auto;
+    }
+
+    .sale-tag {
+      width: 50px;
+      height: 100px;
+      background: #819969;
+      position: absolute;
+      top: -45px;
+      right: -10px;
+      transform: rotate(-45deg);
+
+      span {
+        position: absolute;
+        top: 48px;
+        left: 2px;
+        transform: rotate(45deg);
+        font-size: 11px;
+        color: #fff;
+      }
+    }
+  }
+
+  /** Product list */
+  .products-list {
+    .product {
+      margin-bottom: 30px;
+    }
+
+    figcaption {
+      text-align: center;
+
+      > div {
+        display: block;
+      }
+
+      .btn {
+        display: inline-block;
+      }
+
+      .product-title {
+        margin-top: 10px;
+
+        h3 a {
+          font-weight: 100;
+        }
+      }
+
+      .product-price {
+        font-size: 15px;
+      }
+
+      .product-actions {
+        margin-top: 10px;
+      }
+    }
   }
 }
+

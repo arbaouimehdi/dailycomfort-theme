@@ -5,6 +5,10 @@
       @if(!is_woocommerce())
         {!! App::breadcrumbs() !!}
       @endif
+
+      @if(is_woocommerce())
+        {!! woocommerce_breadcrumb() !!}
+      @endif
     </div>
   </div>
 </div>

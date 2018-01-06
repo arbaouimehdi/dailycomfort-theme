@@ -49,6 +49,17 @@
       background: #7a7a7a !important;
     }
   }
+
+  &.add-to-cart {
+    padding: 4px 30px;
+    font-weight: 600;
+    font-size: 12px;
+
+    &:hover {
+      background: $df-btn-dark-bg !important;
+      color: #fff;
+    }
+  }
 }
 
 .btn-cart {
