@@ -99,7 +99,7 @@ add_filter('woocommerce_template_loader_files', function ($search_files, $defaul
 }, 100, 2);
 
 add_filter('woocommerce_locate_template', function ($template, $template_name, $template_path) {
-  //echo $template_path.'/'.$template_name;
+  //echo $template_path.'/'.$template_name.'<br/>';
   $theme_template = locate_template("{$template_path}{$template_name}");
   return $theme_template ? template_path($theme_template) : $template;
 }, 100, 3);
@@ -111,6 +111,9 @@ add_filter('wc_get_template_part', function ($template, $slug, $name) {
 
 // Remove Woocommerce styles
 add_filter('woocommerce_enqueue_styles', '__return_false');
+
+// Remove the "shop" title
+add_filter( 'woocommerce_show_page_title' , '__return_false' );
 
 /**
  * Contact Form 7

@@ -100,4 +100,46 @@ class Shop extends Controller {
     return $image_url;
   }
 
+  /**
+   * Select Box
+   */
+  public function productsSelectBox() {
+    $per_page = filter_input(INPUT_GET, 'perpage', FILTER_SANITIZE_NUMBER_INT);
+    echo '<div class="woocommerce-perpage styled-select">';
+    echo '<select onchange="if (this.value) window.location.href=this.value">';
+    $orderby_options = array(
+      '12' => '12',
+      '24' => '24',
+      '36' => '36'
+    );
+    foreach( $orderby_options as $value => $label ) {
+      echo "<option ".selected( $per_page, $value )." value='?perpage=$value'>$label</option>";
+    }
+    echo '</select>';
+    echo '<i class="la la-angle-down"></i>';
+    echo '</div></div></div>';
+  }
+
+  /**
+   * Get Products
+   *
+   * @param $query
+   */
+  public function getProductsQuery($query) {
+    $per_page = filter_input(INPUT_GET, 'perpage', FILTER_SANITIZE_NUMBER_INT);
+    if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'product' ) ) {
+      $query->set( 'posts_per_page', $per_page );
+    }
+  }
+
+  /**
+   * Views Modes
+   */
+  public function viewModes(){
+    echo '<div class="col-md-9 toolbox-modes">
+    <div class="woocommerce-view-modes"> 
+      <a class="grid-mode active" title="Grid" href="#"><i class="la la-th-large"></i></a> 
+      <a class="list-mode" title="List" href="#"><i class="la la-bars"></i></a>
+    </div>';
+  }
 }

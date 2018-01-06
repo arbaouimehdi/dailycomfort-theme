@@ -134,3 +134,8 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/** Woocomerce */
+add_action( 'woocommerce_before_shop_loop', 'Shop::productsSelectBox', 35);
+add_action( 'woocommerce_before_shop_loop', 'Shop::viewModes', 25);
+add_action( 'pre_get_posts', 'Shop::getProductsQuery');

@@ -107,5 +107,61 @@
       }
     }
   }
+
+  /** Toolbar */
+  .products-toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .woocommerce-result-count {
+      float: left;
+    }
+
+    .woocommerce-view-modes {
+      a {
+        display: inline-block;
+        float: left;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        margin-left: 5px;
+        color: #ccc;
+        border: 1px solid #e8e8e8;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        i {
+          font-size: 20px;
+          line-height: 36px;
+        }
+
+        &.active {
+          background: #2c2c2c;
+          color: #fff;
+        }
+      }
+    }
+
+    .toolbox-modes {
+      > div {
+        float: right;
+        display: block;
+        margin-left: 15px;
+      }
+
+      form {
+        margin: 0;
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 

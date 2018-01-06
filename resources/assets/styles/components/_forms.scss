@@ -3,6 +3,35 @@ form a {
   text-decoration: underline;
 }
 
+.styled-select {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+
+  select {
+    position: relative;
+    appearance: none;
+    box-shadow: none;
+    z-index: 1;
+    background: none;
+    border-radius: 0;
+    padding: 0.5em 2.5em 0.5em 1.5em;
+    border: 1px solid #e8e8e8;
+    outline: none;
+    height: 40px;
+  }
+
+  i {
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 12px;
+    pointer-events: none;
+    transform: translate(0, -50%);
+  }
+}
+
 .form-group {
   &.form-actions {
     margin-top: 25px;
