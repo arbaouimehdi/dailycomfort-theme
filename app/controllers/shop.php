@@ -142,4 +142,23 @@ class Shop extends Controller {
       <a class="list-mode" title="List" href="#"><i class="la la-bars"></i></a>
     </div>';
   }
+
+  /**
+   * Check if the item exist in the cart
+   *
+   * @param $itemID
+   */
+  public function itemInCart($item_id) {
+    global $woocommerce;
+
+    foreach($woocommerce->cart->get_cart() as $key => $val ) {
+      $_product = $val['data'];
+
+      if($item_id == $_product->id ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 }

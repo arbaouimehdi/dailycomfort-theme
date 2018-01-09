@@ -8,7 +8,7 @@
   text-transform: uppercase;
   padding: 15px 0 10px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   a {
     color: $df-header-text;
@@ -77,6 +77,121 @@
     &:hover {
       text-decoration: none;
       color: $df-second-nav-color;
+    }
+  }
+
+  .nav-cart {
+    position: relative;
+
+    > a {
+      position: relative;
+
+      span {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 11px;
+        top: -4px;
+        background-color: #de4c4c;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      .menu-sc-list {
+        display: block;
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    .menu-sc-list {
+      //display: none;
+      position: absolute;
+      padding: 20px;
+      width: 270px;
+      right: 0;
+      //right: 50%;
+      left: auto;
+      margin-right: 0;
+      //opacity: 0;
+      top: 100%;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      text-align: left;
+      box-shadow: 0 4px 13px -3px #808080;
+
+      > ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          position: relative;
+          padding: 0 0 20px;
+          margin: 0 0 20px;
+          width: 100%;
+          border-bottom: 1px solid #e5e5e5;
+
+          .menu-sc-img {
+            float: left;
+            width: 80px;
+
+            img {
+              height: 80px;
+            }
+          }
+
+          .menu-sc-items-wrapper {
+            margin-left: 20px;
+            padding-right: 7px;
+            display: inline-block;
+            width: 50%;
+
+            h3 {
+              height: auto;
+              max-height: 44px;
+              overflow: hidden;
+              font-size: 14px;
+              line-height: 22px;
+              text-transform: none;
+              margin-bottom: 5px;
+            }
+
+            span {
+              font-weight: bold;
+              font-size: 14px;
+            }
+
+            p {
+              margin: 0;
+              font-size: 12px;
+              line-height: 1.7em;
+              text-transform: none;
+            }
+
+            .remove-item {
+              color: #fff;
+              position: absolute;
+              right: 0;
+              top: 3px;
+              font-size: 11px;
+              padding: 1px;
+              background: #000;
+            }
+
+            .amount {
+              font-size: 10px;
+            }
+          }
+        }
+      }
     }
   }
 }
