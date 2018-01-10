@@ -2,6 +2,7 @@
   global $woocommerce;
   $items_count = $woocommerce->cart->cart_contents_count;
   $items = WC()->cart->get_cart();
+  $currency = get_woocommerce_currency_symbol();
 ?>
 <header class="main-header {{ !is_front_page() ? 'header-shadow' : '' }}">
   <div class="container">
@@ -41,7 +42,7 @@
       <div class="nav-cart">
 
         {{-- # --}}
-        <a href="#">
+        <a href="{{ wc_get_cart_url() }}">
           <i class="la la-shopping-cart"></i>
           @if($items_count > 0)
             <span>{{ $woocommerce->cart->cart_contents_count }}</span>
@@ -57,26 +58,31 @@
             {{-- # List --}}
             <ul>
               @foreach($items as $item => $values)
-                @php($_product = $values['data']->post)
-                @php($variation = $values['variation_id'])
+                @php
+                  $_product   = $values['data']->post;
+                  $variation  = $values['variation_id'];
+                  $product_id = $values['product_id'];
+                  $price      = get_post_meta( $values['product_id'], '_regular_price', true);
+                  $quantity   = $values['quantity'];
+                @endphp
                 <li>
                   <div class="menu-sc-img">
-                    <a href="#">
-                      {!! get_the_post_thumbnail( $values['product_id'], 'thumbnail' ) !!}
+                    <a href="{{ get_permalink($product_id) }}">
+                      {!! get_the_post_thumbnail($product_id, 'thumbnail' ) !!}
                     </a>
                   </div>
                   <div class="menu-sc-items-wrapper">
                     <h3>
-                      <a href="#">{{ $_product->post_title }}</a>
+                      <a href="{{ get_permalink($product_id) }}">{{ $_product->post_title }}</a>
                     </h3>
                     <span>
-                    <span class="quantity">1</span>
+                    <span class="quantity">{{ $quantity }}</span>
                     <span class="amount">x</span>
                     <span class="price">
-                      <span>$</span>130.00
+                      <span>{{ $currency }}</span>{{ $price }}
                     </span>
                   </span>
-                    <a href="#" class="remove-item" title="">
+                    <a href="#" class="remove-item" title="" data-product-id="{{ $product_id }}">
                       <i class="la la-close"></i>
                     </a>
                   </div>
@@ -85,10 +91,18 @@
             </ul>
 
             {{-- # Actions --}}
-            <div class="menu-sc-actions" style="display: none">
-              <span>Subtotal :$130.00</span>
-              <a href="#" class="btn">View cart</a>
-              <a href="#" class="btn">Checkout</a>
+            <div class="menu-sc-actions">
+              <span class="menu-sc-subtotal">
+                Subtotal :
+                {!! $woocommerce->cart->get_cart_subtotal() !!}
+              </span>
+              <span class="menu-sc-buttons">
+                <a href="{{ wc_get_cart_url() }}" class="btn btn-dark">
+                  <i class="la la-shopping-cart"></i>
+                  View cart
+                </a>
+                <a href="{{ wc_get_checkout_url() }}" class="btn">Checkout</a>
+              </span>
             </div>
 
             {{-- # No Item --}}
