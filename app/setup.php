@@ -139,3 +139,5 @@ add_action('after_setup_theme', function () {
 add_action( 'woocommerce_before_shop_loop', 'Shop::productsSelectBox', 35);
 add_action( 'woocommerce_before_shop_loop', 'Shop::viewModes', 25);
 add_action( 'pre_get_posts', 'Shop::getProductsQuery');
+add_action('wp_ajax_remove_item_from_cart', 'Shop::remove_item_from_cart');
+add_action('wp_ajax_nopriv_remove_item_from_cart', 'Shop::remove_item_from_cart');

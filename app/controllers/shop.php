@@ -161,4 +161,23 @@ class Shop extends Controller {
 
     return false;
   }
+
+  /**
+   * Remove Item From Cart
+   *
+   * @return bool
+   */
+  function remove_item_from_cart() {
+    $cart = WC()->instance()->cart;
+    $id = $_POST['product_id'];
+    $cart_id = $cart->generate_cart_id($id);
+    $cart_item_id = $cart->find_product_in_cart($cart_id);
+
+    if($cart_item_id){
+      $cart->set_quantity($cart_item_id, 0);
+      return true;
+    }
+    return false;
+  }
+
 }
