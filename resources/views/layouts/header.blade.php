@@ -82,7 +82,7 @@
                       <span>{{ $currency }}</span>{{ $price }}
                     </span>
                   </span>
-                    <a href="#" class="remove-item" title="" data-product-id="{{ $product_id }}">
+                    <a href="#" class="remove-item" title="" data-product-id="{{ esc_attr($product_id) }}">
                       <i class="la la-close"></i>
                     </a>
                   </div>

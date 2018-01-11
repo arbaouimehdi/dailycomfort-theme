@@ -167,7 +167,8 @@ class Shop extends Controller {
    *
    * @return bool
    */
-  function remove_item_from_cart() {
+  public function removeItemFromCart() {
+    ob_clean();
     $cart = WC()->instance()->cart;
     $id = $_POST['product_id'];
     $cart_id = $cart->generate_cart_id($id);
@@ -175,9 +176,24 @@ class Shop extends Controller {
 
     if($cart_item_id){
       $cart->set_quantity($cart_item_id, 0);
-      return true;
+      // echo the Cart HTML list
     }
-    return false;
+    wp_die();
+  }
+
+  /**
+   * Add item to cart
+   *
+   */
+  public function addItemToCart(){
+    ob_clean();
+    $product_id       = $_POST['product_id'];
+    $product_quantity = $_POST['product_quantity'];
+    WC()->cart->add_to_cart($product_id, $product_quantity);
+
+    // echo the Cart HTML list
+
+    wp_die();
   }
 
 }
