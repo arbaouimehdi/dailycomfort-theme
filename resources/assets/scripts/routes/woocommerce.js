@@ -10,13 +10,13 @@ export default {
     $('.woocommerce-view-modes a').on('click', function(){
 
       if ($(this).hasClass('list-mode')) {
-        $('.products-list').addClass('list');
+        $('.products-list').addClass('list').find('> .col').removeClass('col-md-4');
         $('.woocommerce-view-modes a').removeClass('active');
         $(this).addClass('active');
       }
 
       else {
-        $('.products-list').removeClass('list');
+        $('.products-list').removeClass('list').find('> div').addClass('col-md-4');
         $('.woocommerce-view-modes a').removeClass('active');
         $(this).addClass('active');
       }

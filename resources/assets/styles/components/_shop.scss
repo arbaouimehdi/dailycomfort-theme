@@ -118,6 +118,10 @@
       margin-bottom: 30px;
     }
 
+    .product-description {
+      display: none;
+    }
+
     figcaption {
       text-align: center;
 
@@ -143,6 +147,31 @@
 
       .product-actions {
         margin-top: 10px;
+      }
+    }
+
+    &.list {
+      .col {
+        flex: inherit;
+        margin-bottom: 20px;
+      }
+
+      .product-image {
+        float: left;
+        width: 30%;
+      }
+
+      .product-description {
+        display: block;
+        margin: 14px 0 20px;
+      }
+
+      figcaption {
+        width: 70%;
+        padding: 0 15px 0 30px;
+        margin: 0;
+        display: inline-block;
+        text-align: left;
       }
     }
   }

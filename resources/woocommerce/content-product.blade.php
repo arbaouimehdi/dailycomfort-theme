@@ -63,6 +63,11 @@ global $product;
         @endif
       </div>
 
+      {{-- # Description --}}
+      <div class="product-description">
+        {{ $product->short_description }}
+      </div>
+
       {{-- # Add to Cart Button --}}
       <div class="product-actions">
         <a href="#"
