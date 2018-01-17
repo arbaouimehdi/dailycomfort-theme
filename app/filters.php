@@ -110,7 +110,7 @@ add_filter('wc_get_template_part', function ($template, $slug, $name) {
 }, 100, 3);
 
 // Remove Woocommerce styles
-add_filter('woocommerce_enqueue_styles', '__return_false');
+//add_filter('woocommerce_enqueue_styles', '__return_false');
 
 // Remove the "shop" title
 add_filter( 'woocommerce_show_page_title' , '__return_false' );

@@ -20,6 +20,42 @@
     opacity: 0.5;
   }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    color: #666;
+    filter: none !important;
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 11px 15px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    box-shadow: none;
+  }
+
+  #respond input#submit.alt,
+  a.button.alt,
+  button.button.alt,
+  input.button.alt {
+    background: #444;
+  }
+
   main,
   .sidebar {
     margin: 20px 0;
@@ -286,6 +322,10 @@
       .actions {
         text-align: right;
 
+        #coupon_code {
+          width: auto;
+        }
+
         .coupon {
           float: left;
 
@@ -397,6 +437,46 @@
           margin-top: 0;
         }
       }
+    }
+  }
+
+  /** Checkout */
+  .col2-set {
+    .col-1,
+    .col-2 {
+      flex: inherit;
+      max-width: inherit;
+    }
+  }
+
+  form {
+    input.button {
+      padding: 9px 20px !important;
+    }
+
+    .form-row {
+      label {
+        font-weight: 300;
+
+        &.inline {
+          margin-left: 35px;
+        }
+      }
+    }
+
+    &.login,
+    &.register {
+      padding-top: 20px;
+      margin: 0;
+      border: 0;
+    }
+  }
+
+  .woocommerce-info {
+    border-top-color: transparent;
+
+    &::before {
+      color: #535353;
     }
   }
 }
