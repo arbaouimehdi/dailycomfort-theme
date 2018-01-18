@@ -53,6 +53,19 @@ export default {
         },
       });
       return false;
+    });
+
+    /**
+     *
+     * Toggle Search
+     *
+     */
+    $('.nav-search a').click(function(){
+      $('.main-header  .search').show();
+    });
+
+    $('.search .la-close').click(function(){
+      $('.main-header .search').hide();
     })
 
   },

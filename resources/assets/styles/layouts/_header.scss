@@ -1,13 +1,13 @@
 /** Header */
 .main-header {
   background: #fff;
+  position: relative;
   float: left;
   width: 100%;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   padding: 15px 0 10px;
-  position: relative;
   z-index: 2;
 
   a {
@@ -16,6 +16,43 @@
 
   &.header-shadow {
     box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.13);
+  }
+
+  .search {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+
+    .search-inner {
+      max-width: 1140px;
+      margin: auto;
+    }
+
+    .woocommerce-product-search {
+      float: left;
+      width: 90%;
+
+      .search-field {
+        border: none;
+        float: left;
+        outline: 0;
+        font-size: 17px;
+        padding-top: 13px;
+        width: 100%;
+      }
+    }
+
+    .la-close {
+      float: right;
+      margin-top: 11px;
+      cursor: pointer;
+      font-size: 24px;
+    }
   }
 }
 
